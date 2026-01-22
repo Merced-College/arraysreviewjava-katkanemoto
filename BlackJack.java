@@ -9,6 +9,7 @@ public class BlackJack {
             "Ace" };
     private static final int[] DECK = new int[52];
     private static int currentCardIndex = 0;
+    
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
