@@ -1,3 +1,8 @@
+//Kanemoto
+//1.23.26
+//BlackJack Game enhancement
+//  
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -88,6 +93,9 @@ public class BlackJack {
         return playerTotal;
     }
 
+    //this function works so that it just keeps picking cards until the dealer reaches 17 
+    // or more - which is not very smart.  An enahncement would be to make it smarter,
+    //and choose based on other criteria.
     private static int dealerTurn(int dealerTotal) {
         while (dealerTotal < 17) {
             int newCard = dealCard();
@@ -112,9 +120,15 @@ public class BlackJack {
     }
 
     private static int cardValue(int card) {
-        return card < 9 ? card + 2 : 10;
+        //another way to write this code, that might be more friendly
+        //Kanemoto
+        if(card < 9) 
+            return card + 2;
+        else 
+            return 10;
+        //return card < 9 ? card + 2 : 10;
     }
-
+ 
     int linearSearch(int[] numbers, int key) {
         int i = 0;
         for (i = 0; i < numbers.length; i++) {
